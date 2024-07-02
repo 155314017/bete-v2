@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>BETE - OTP</title>
+  </head>
+  <body class="font-poppins">
+    <!-- Navbar -->
+    <nav class="bg-slate-50 fixed top-0 z-10 w-full shadow-lg">
+      <div class="mx-auto max-w-7xl px-7 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-1 border-2 text-orange-400 hover:bg-orange-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->   
+              <svg
+                class="block h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+              <svg
+                class="hidden h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="flex flex-1 md:items-stretch md:justify-between"
+          >
+            <div class="flex flex-shrink-0">
+              <img
+                class="h-10 w-auto"
+                src="/src/img/icon/logo.png"
+                alt="Logo BETE"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="#"
+                  class="rounded-md bg-orange-500 px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+                  >Team</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+                  >Projects</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+                  >Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden shadow-lg sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="block rounded-md bg-orange-500 px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+            >Calendar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bottom Navbar -->
+    <div
+      class="fixed bottom-0 left-0 z-50 w-full h-[131px] bg-white drop-shadow-lg border-t-2"
+    >
+      <div class="h-full max-w-lg mx-auto">
+        <div class="flex items-center justify-between px-6 py-5">
+            <h1 class="text-[12px]">Harga mulai dari</h1>
+            <h1 class="text-[16px] font-bold tracking-wide">Rp 50.000,-</h1>
+        </div>
+        <div class="px-6 mx-auto">
+            <button type="button" class=" bg-gray-400 shadow-lg w-full rounded-[5px] text-white font-semibold tracking-wider text-[12px] p-2">Bayar Sekarang</button>
+        </div>
+      </div>
+    </div>
+
+          <!-- Form Signup -->
+          <div class="container mx-auto mt-[85px]">
+            <div class="mx-auto px-4 w-[365px] h-[241px] rounded-[10px] shadow-lg bg-slate-100 border">
+                <h1 class="font-bold text-[12px] my-3">Data Pemesan</h1>
+                <form class="max-w-md mx-auto">
+                    <!-- OTP form -->
+                    <div class="mb-5">
+                        <label for="number" class="block mb-2 text-[12px]">OTP</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                <svg 
+                                class="h-5 w-5"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="6" r="2"></circle><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="6" cy="12" r="2"></circle><circle cx="18" cy="12" r="2"></circle><circle cx="12" cy="18" r="2"></circle></svg>
+                            </div>
+                            <input type="number" placeholder="OTP" required class="rounded-[5px] border shadow-md text-[12px] w-full block ps-10 p-2.5 tracking-wider placeholder-gray-400">
+                        </div>  
+                    </div>
+    
+                    <!-- button -->
+                     <button type="submit" class="bg-blue-500 rounded-[5px] text-white tracking-wider w-full h-[40px] text-[12px] font-semibold shadow-md">Verifikasi Data Pemesan</button>
+                     <h1 class="text-[12px] text-center mx-auto my-6 text-gray-400">Tidak menerima OTP? <a href="#" class="text-blue-500">Kirim ulang</a></h1>
+                </form>
+                </div>
+            </div>
+
+     <!-- button section -->
+      <section class="container mx-auto h-[100vh]">
+        <div class="flex flex-col items-center justify-center mt-4 gap-4">
+            <!-- pengunjung 1 -->
+            <div class="w-[365px] h-[71px] rounded-[10px] border shadow-lg flex items-center">
+                <div class="flex items-center justify-between m-4 w-full">
+                    <h1 class="text-[12px] font-bold">Data Pengunjung 1</h1>
+                    <svg
+                    class="h-6 w-6 text-blue-500"
+                    aria-hidden="true" 
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10.296 7.71 14.621 12l-4.325 4.29 1.408 1.42L17.461 12l-5.757-5.71z"></path><path d="M6.704 6.29 5.296 7.71 9.621 12l-4.325 4.29 1.408 1.42L12.461 12z"></path></svg>
+                </div>
+            </div>
+
+            <!-- pengunjung 2 -->
+            <div class="w-[365px] h-[71px] rounded-[10px] border shadow-lg flex items-center">
+                <div class="flex items-center justify-between m-4 w-full">
+                    <h1 class="text-[12px] font-bold">Data Pengunjung 2</h1>
+                    <svg
+                    class="h-6 w-6 text-blue-500"
+                    aria-hidden="true" 
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10.296 7.71 14.621 12l-4.325 4.29 1.408 1.42L17.461 12l-5.757-5.71z"></path><path d="M6.704 6.29 5.296 7.71 9.621 12l-4.325 4.29 1.408 1.42L12.461 12z"></path></svg>
+                </div>
+            </div>
+        </div>
+      </section>
+  </body>
+</html>

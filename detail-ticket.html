@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>BETE - Detail Ticket</title>
+  </head>
+  <body class="font-poppins">
+    <!-- Navbar -->
+    <nav class="bg-slate-50 fixed top-0 z-10 w-full shadow-lg">
+      <div class="mx-auto max-w-7xl px-7 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-1 border-2 text-orange-400 hover:bg-orange-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->   
+              <svg
+                class="block h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+              <svg
+                class="hidden h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="flex flex-1 md:items-stretch md:justify-between"
+          >
+            <div class="flex flex-shrink-0">
+              <img
+                class="h-10 w-auto"
+                src="/src/img/icon/logo.png"
+                alt="Logo BETE"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="#"
+                  class="rounded-md bg-orange-500 px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+                  >Team</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+                  >Projects</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+                  >Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden shadow-lg sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="block rounded-md bg-orange-500 px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-orange-300 hover:text-white"
+            >Calendar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bottom Navbar -->
+    <div
+      class="fixed bottom-0 left-0 z-50 w-full h-[131px] bg-white drop-shadow-lg border-t-2"
+    >
+      <div class="h-full max-w-lg mx-auto">
+        <div class="flex items-center justify-between px-6 py-5">
+            <h1 class="text-[12px]">Harga mulai dari</h1>
+            <h1 class="text-[16px] font-bold tracking-wide">Rp 50.000,-</h1>
+        </div>
+        <div class="px-6 mx-auto">
+            <button type="button" class=" bg-blue-500 shadow-lg w-full rounded-[5px] text-white font-semibold tracking-wider text-[12px] p-2">Pilih Tiket</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poster section -->
+     <section class="container mx-auto">
+        <div class="mt-[80px]">
+            <img class="mx-auto w-[365px] h-[198px] rounded-[10px]" src="./src/img/card1.png" alt="Poster-Event">
+        </div>
+
+        <div class="h-[181px] w-[365px] bg-slate-50 border-2 rounded-[10px] mx-auto mt-2 shadow-lg">
+            <div class="px-4 py-2">
+                <h1 class="text-[16px] font-bold mb-2">Technofest 5.0</h1>
+                <h1 class="text-[12px] text-gray-500">10 Desember 2024</h1>
+                <a href="" class="text-[12px] text-blue-500">Jalan Jendral Sudirman Km.5 No 18, Yogyakarta</a>
+                <hr class="bg-gray-600 border-2 mt-3 mb-3 rounded">
+
+                <div class="flex space-x-4 items-center">
+                    <div>
+                        <img src="./src/img/profile.jpg" alt="" class="h-[53px] w-[53px] rounded-full border">
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold text-[12px]">Panitia Technofest 5.0</h1>
+                        <h1 class="text-[12px] text-gray-500">Penyelenggara</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- button section -->
+      <section class="container mx-auto">
+        <div class="flex items-center justify-center mt-2 gap-2">
+            <div class="relative">
+            <button type="button" class="w-[177px] h-[44px] border shadow-lg rounded-[5px] text-[12px] tracking-wide bg-slate-100">Deskripsi</button>
+            <hr class="hidden absolute mx-auto inset-x-0 bottom-0 w-[80%] border-2 border-orange-400 rounded">
+            </div>
+            
+            <div class="relative">
+            <button type="button" class="w-[177px] h-[44px] border shadow-lg rounded-[5px] text-[12px] tracking-wide bg-slate-100">Ticket</button>
+            <hr class="absolute mx-auto inset-x-0 bottom-0 w-[80%] border-2 border-orange-400 rounded">
+            </div>            
+        </div>
+      </section>
+
+      <!-- Description section -->
+       <section class="container mx-auto flex flex-col gap-4 py-4 h-[700px]">
+        <div class="bg-slate-100 rounded-[10px] h-[149px] w-[365px] shadow-lg border mx-auto">
+            <div class="m-4">
+                <h1 class="font-bold text-[12px] mb-2">Early bird 1 - VVIP 1</h1>
+                <h1 class="text-[12px] text-gray-400">Sudah Termasuk pajak dan admin</h1>
+                <h1 class="text-[12px] text-orange-400 mb-4">Berakhir 22 November 2023 23:00 WIB</h1>
+                <div class="flex justify-between items-center">
+                    <h1 class="font-bold text-[16px]">Rp 50.000,-</h1>
+                    <h1 class="flex font-bold text-[12px] rounded-[10px] w-[126px] h-[33px] tracking-wide text-white bg-gray-400 shadow-md justify-center items-center">STOK HABIS</h1>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-100 rounded-[10px] h-[149px] w-[365px] shadow-lg border mx-auto">
+            <div class="m-4">
+                <h1 class="font-bold text-[12px] mb-2">Early bird 1 - VVIP 1</h1>
+                <h1 class="text-[12px] text-gray-400">Sudah Termasuk pajak dan admin</h1>
+                <h1 class="text-[12px] text-orange-400 mb-4">Berakhir 22 November 2023 23:00 WIB</h1>
+                <div class="flex justify-between items-center">
+                    <h1 class="font-bold text-[16px]">Rp 50.000,-</h1>
+                    <div class="flex items-center justify-center gap-4">
+                        <button type="button" class="h-[31px] w-[33px] rounded-[5px] bg-blue-500 text-[16px] font-bold text-white shadow-md">-</button>
+                        <h1 class="text-[12px] font-bold">2</h1>
+                        <button type="button" class="h-[31px] w-[33px] rounded-[5px] bg-blue-500 text-[16px] font-bold text-white shadow-md">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+    
+  </body>
+</html>
